@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+	text?: string;
+	ctaLabel?: string;
+	ctaHref?: string;
+	image?: string;
+	imageAlt?: string;
+}
+
+const { title, text, ctaLabel, ctaHref, image, imageAlt = '' } = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden">
+	{image && (
+		<div class="absolute inset-0 -z-10">
+			<img
+				src={image}
+				alt={imageAlt}
+				class="w-full h-full object-cover"
+				loading="eager"
+				decoding="async"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-b from-bg-darker/70 via-bg-darker/60 to-bg-dark"></div>
+		</div>
+	)}
+
+	<div class="max-w-5xl mx-auto px-4 md:px-8 py-20 md:py-32 text-center">
+		<h1 class="font-serif text-4xl md:text-6xl leading-tight text-white">
+			{title}
+		</h1>
+		<div class="mt-5 mx-auto w-16 h-px bg-accent-light"></div>
+		{text && (
+			<p class="mt-8 max-w-3xl mx-auto text-base md:text-lg text-gray-200 leading-relaxed">
+				{text}
+			</p>
+		)}
+		{ctaLabel && ctaHref && (
+			<a
+				href={ctaHref}
+				class="inline-block mt-10 px-7 py-3 bg-accent hover:bg-accent-hover text-white font-medium rounded transition-colors"
+			>
+				{ctaLabel}
+			</a>
+		)}
+	</div>
+</section>

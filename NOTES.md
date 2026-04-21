@@ -63,6 +63,24 @@ Další stránky Webnode (O nás, Služby, Naše práce, Kontakt) ještě projí
 
 ---
 
+## Kde pokračovat příště
+
+**Hotovo ke 2026-04-22 večer:**
+- Fáze 1 — Astro 6.1.8 + Tailwind 4 přes Vite plugin (`@tailwindcss/vite`), `@theme` v `src/styles/global.css` s barvami a fonty z `DESIGN.md`, `astro.config.mjs` má `site: 'https://kovovyrobarozbroj.cz'`.
+- Fáze 2 — datová vrstva (`src/data/kontakty.json`, `navigace.json`) + `src/layouts/BaseLayout.astro` + komponenty `Header.astro`, `Footer.astro`, `Hero.astro`, `ContentSection.astro`, `Gallery.astro` (s placeholderem, když nejsou fotky). Build prochází bez chyb.
+- `src/pages/index.astro` je teď dočasný stub na `BaseLayout`, obsah se přepíše ve Fázi 3.
+
+**Příště začít Fází 3** — 5 stránek s obsahem doslovně z `CONTENT.md`:
+1. `src/pages/index.astro` — Hero + 4 sekce (Profesionální přístup, Nerez, Kovový nábytek, CTA)
+2. `src/pages/o-nas.astro`
+3. `src/pages/sluzby.astro`
+4. `src/pages/nase-prace.astro` — placeholder přes `Gallery.astro` bez props
+5. `src/pages/kontakt.astro` — kontaktní karty, Google Maps embed, závěrečná sekce s osobami
+
+Před Fází 3 bude taky potřeba stáhnout fotky z Webnode do `public/images/` (URL v sekci Assety níž).
+
+---
+
 ## Otevřené body
 
 - [ ] Projít zbývající 4 stránky Webnode (O nás, Služby, Naše práce, Kontakt) + sesbírat fotky
@@ -70,5 +88,6 @@ Další stránky Webnode (O nás, Služby, Naše práce, Kontakt) ještě projí
 - [ ] Stáhnout loga a fotky z Webnode do `public/images/`
 - [ ] Rozhodnutí klienta ohledně self-service editace (viz PLAN.md Fáze 7)
 - [ ] Fotky do galerie „Naše práce" — dodá klient později
-- [ ] Doména `kovovyrobarozbroj.cz` — koupit (ne-li už koupená)
+- [ ] **Fotky majitelů (Tomáš + Martin společně)** — klient dodá; bude je chtít na web, umístění (hero / O nás / jinde) upřesní později. Počítat s prostorem v O nás a příp. sekci „Kdo jsme" na úvodu.
+- [ ] **Doména `kovovyrobarozbroj.cz` — zatím NEKOUPENÁ**, uživatel ji teprve bude kupovat (aktualizováno 2026-04-22). Před fází Deploy je potřeba koupit (Wedos/Forpsi) a nastavit DNS záznamy na Vercel.
 - [ ] Vercel účet — založit (ne-li už založený)

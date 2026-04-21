@@ -28,3 +28,9 @@ Thumbs.db
 
 # reference materiál (velké binárky — do repa se nemusí pushovat)
 reference-screenshots/
+
+# Claude Code interní stav
+.claude/
+
+# Složka s fotkami (zdrojové — ne do repa)
+Fotky/

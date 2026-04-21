@@ -1,0 +1,83 @@
+---
+import navigace from '../data/navigace.json';
+import kontakty from '../data/kontakty.json';
+
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (url: string) => {
+	const u = url.replace(/\/$/, '') || '/';
+	return pathname === u;
+};
+---
+
+<header class="sticky top-0 z-40 bg-bg-darker/90 backdrop-blur border-b border-white/10">
+	<div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+		<a href="/" class="font-serif text-xl md:text-2xl text-accent-light hover:text-accent transition-colors">
+			{kontakty.firma.nazev}
+		</a>
+
+		<nav class="hidden md:flex items-center gap-7" aria-label="Hlavní navigace">
+			{navigace.map((item) => (
+				<a
+					href={item.url}
+					class:list={[
+						'text-sm uppercase tracking-wide transition-colors',
+						isActive(item.url)
+							? 'text-accent-light font-semibold'
+							: 'text-gray-300 hover:text-accent-light',
+					]}
+					aria-current={isActive(item.url) ? 'page' : undefined}
+				>
+					{item.nazev}
+				</a>
+			))}
+		</nav>
+
+		<button
+			type="button"
+			id="menu-toggle"
+			class="md:hidden text-gray-200 p-2 -mr-2"
+			aria-label="Otevřít menu"
+			aria-expanded="false"
+			aria-controls="mobile-menu"
+		>
+			<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</button>
+	</div>
+
+	<nav
+		id="mobile-menu"
+		class="md:hidden hidden border-t border-white/10 bg-bg-darker"
+		aria-label="Mobilní navigace"
+	>
+		<ul class="px-4 py-3 space-y-1">
+			{navigace.map((item) => (
+				<li>
+					<a
+						href={item.url}
+						class:list={[
+							'block px-3 py-3 rounded text-base transition-colors',
+							isActive(item.url)
+								? 'text-accent-light font-semibold bg-white/5'
+								: 'text-gray-200 hover:bg-white/5',
+						]}
+						aria-current={isActive(item.url) ? 'page' : undefined}
+					>
+						{item.nazev}
+					</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+</header>
+
+<script>
+	const btn = document.getElementById('menu-toggle');
+	const menu = document.getElementById('mobile-menu');
+	btn?.addEventListener('click', () => {
+		const open = menu?.classList.toggle('hidden') === false;
+		btn.setAttribute('aria-expanded', String(open));
+		btn.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu');
+	});
+</script>
