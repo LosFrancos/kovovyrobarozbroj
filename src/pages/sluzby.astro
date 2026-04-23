@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<BaseLayout
+	title="Služby | Kovovýroba Rozbroj"
+	description="Nabízíme svařování TIG a MIG, práškové lakování KOMAXIT a rychlý servis. Konzultace zdarma."
+>
+	<Hero title="Nabízíme" />
+
+	<ContentSection>
+		<p>Bezplatnou konzultaci výroby na míru přesně podle vašich představ. Poradíme vám s výběrem vhodného materiálu i povrchové úpravy, aby byl výsledný výrobek nejen funkční, ale i odolný a estetický.</p>
+		<p>Zakládáme si na individuálním přístupu, kvalitní práci a spolehlivosti při každé zakázce.</p>
+	</ContentSection>
+
+	<ContentSection title="Metody svařování">
+		<p>Využíváme metody svařování TIG a MIG, které umožňují dosáhnout pevného, kvalitního a esteticky čistého svaru.</p>
+		<p>Specializujeme se na svařování oceli a nerezu, kde dbáme na precizní provedení, pevnost spojů a dlouhou životnost výsledného výrobku. Každý materiál vyžaduje individuální přístup, proto vždy volíme vhodnou technologii podle konkrétní zakázky.</p>
+	</ContentSection>
+
+	<ContentSection title="Práškové lakování (KOMAXIT)">
+		<p>Pro zajištění kvalitní povrchové úpravy nabízíme možnost práškového lakování ve spolupráci s ověřenými partnery. Tento typ lakování poskytuje vysokou odolnost proti korozi, poškození i povětrnostním vlivům a zároveň zajišťuje dlouhodobě estetický vzhled výrobku.</p>
+	</ContentSection>
+
+	<ContentSection title="Rychlý servis">
+		<p>V případě potřeby jsme schopni přijet v co nejkratším možném termínu a zajistit úpravy nebo opravy přímo na místě. Reagujeme flexibilně na vzniklé problémy a snažíme se zajistit rychlé a spolehlivé řešení.</p>
+		<p>Typickým příkladem je seřízení bran nebo vrat po jejich sesednutí či pohnutí vlivem času nebo podloží. Zajistíme potřebné úpravy tak, aby byla zajištěna správná funkčnost, bezpečnost a dlouhá životnost konstrukce.</p>
+	</ContentSection>
+</BaseLayout>

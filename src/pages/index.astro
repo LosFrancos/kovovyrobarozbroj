@@ -1,15 +1,41 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ContentSection from '../components/ContentSection.astro';
 ---
 
 <BaseLayout
 	title="Kovovýroba Rozbroj — Karviná | Brány, ploty, zábradlí na míru"
 	description="Rodinná kovovýroba z Karviné. Vyrábíme brány, ploty, schodiště, zábradlí a kovový nábytek na míru. Svařování TIG a MIG, nerez i ocel. ČR, SK, PL."
 >
-	<section class="max-w-3xl mx-auto px-4 md:px-8 py-20">
-		<h1 class="font-serif text-4xl md:text-5xl text-accent-light">Kovovýroba Rozbroj</h1>
-		<p class="mt-4 text-gray-300">
-			Obsah úvodní stránky se naplní ve Fázi 3.
-		</p>
-	</section>
+	<Hero
+		title="Kovovýroba a svářečské práce na míru"
+		text="Vítejte na stránkách Kovovýroba Rozbroj - společnosti specializující se na kovovýrobu na míru. Jsme Vaším spolehlivým partnerem pro výrobu plotů, bran, branek, schodišť, zábradlí, garážových vrat a mnoho dalšího. Pomáháme Vám vytvořit bezpečné a esteticky působivé prostředí pro Vaše domovy."
+		ctaLabel="Kontaktujte nás"
+		ctaHref="/kontakt"
+	/>
+
+	<ContentSection
+		title="Profesionální a individuální přístup"
+		ctaLabel="O nás"
+		ctaHref="/o-nas"
+	>
+		<p>Každému zákazníkovi věnujeme maximální pozornost a hledáme řešení přesně podle jeho potřeb. Zakládáme si na osobním přístupu, spolehlivosti a pečlivém zpracování každé zakázky. Díky dlouholetým zkušenostem dokážeme poradit s výběrem vhodného materiálu i technologií, aby výsledný produkt splňoval nejvyšší požadavky na kvalitu a funkčnost.</p>
+	</ContentSection>
+
+	<ContentSection title="Vyrábíme také z nerezové oceli">
+		<p>Naše výrobky nabízíme také v provedení z nerezové oceli, která vyniká vysokou odolností, dlouhou životností a elegantním vzhledem. Nerez je ideální volbou pro náročné prostředí, kde je vyžadována odolnost proti korozi, vlhkosti nebo častému používání. Každý nerezový výrobek zpracováváme s maximální přesností a důrazem na detail, aby splňoval nejen technické, ale i estetické požadavky.</p>
+	</ContentSection>
+
+	<ContentSection title="Kovový nábytek">
+		<p>Vyrábíme také kovový nábytek, který spojuje moderní design s pevností a dlouhou životností. Na zakázku tvoříme jídelní stoly s masivní nebo mramorovou deskou, noční stolky, stolky pod TV i další originální kusy do interiéru. Každý výrobek přizpůsobíme vašim požadavkům na rozměry, barvu i povrchovou úpravu tak, aby ladil s vaším prostorem a vydržel dlouhá léta.</p>
+	</ContentSection>
+
+	<ContentSection
+		title="Chcete nás kontaktovat?"
+		ctaLabel="Ozvěte se nám"
+		ctaHref="/kontakt"
+	>
+		<p>Naším cílem je dodávat kvalitní a spolehlivá řešení, která splní vaše požadavky a vydrží dlouhá léta. Zakládáme si na precizním zpracování, férovém jednání a individuálním přístupu ke každé zakázce.</p>
+	</ContentSection>
 </BaseLayout>

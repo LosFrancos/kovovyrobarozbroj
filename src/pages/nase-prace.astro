@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ContentSection from '../components/ContentSection.astro';
+import Gallery from '../components/Gallery.astro';
+---
+
+<BaseLayout
+	title="Naše práce | Kovovýroba Rozbroj"
+	description="Fotogalerie našich realizací — brány, ploty, schodiště, zábradlí, kovový nábytek."
+>
+	<Hero title="Naše práce" />
+
+	<ContentSection>
+		<p>Fotodokumentace našich realizací zahrnuje ukázky hotových výrobků i průběh jednotlivých montáží. Díky tomu si můžete udělat jasnou představu o kvalitě naší práce, způsobu provedení i důrazu na detail při každé zakázce.</p>
+	</ContentSection>
+
+	<section class="pb-16 md:pb-24">
+		<div class="max-w-6xl mx-auto px-4 md:px-8">
+			<Gallery />
+		</div>
+	</section>
+</BaseLayout>
