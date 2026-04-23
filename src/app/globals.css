@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* iOS anti-zoom na form inputech */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-content mx-auto px-5 md:px-8;
+  }
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-eyebrow;
+  }
+  .h-display {
+    @apply font-display font-extrabold uppercase leading-[0.95] tracking-tight;
+  }
+}

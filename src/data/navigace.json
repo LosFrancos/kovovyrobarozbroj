@@ -1,7 +1,0 @@
-[
-  { "nazev": "Úvod", "url": "/" },
-  { "nazev": "O nás", "url": "/o-nas" },
-  { "nazev": "Služby", "url": "/sluzby" },
-  { "nazev": "Naše práce", "url": "/nase-prace" },
-  { "nazev": "Kontakt", "url": "/kontakt" }
-]
