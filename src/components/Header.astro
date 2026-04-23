@@ -11,8 +11,15 @@ const isActive = (url: string) => {
 
 <header class="sticky top-0 z-40 bg-bg-darker/90 backdrop-blur border-b border-white/10">
 	<div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-		<a href="/" class="font-serif text-xl md:text-2xl text-accent-light hover:text-accent transition-colors">
-			{kontakty.firma.nazev}
+		<a href="/" class="flex items-center gap-3 shrink-0" aria-label={`${kontakty.firma.nazev} — domů`}>
+			<img
+				src="/images/logo.png"
+				alt={`${kontakty.firma.nazev} — logo`}
+				class="h-10 md:h-12 w-auto"
+				width="450"
+				height="281"
+				decoding="async"
+			/>
 		</a>
 
 		<nav class="hidden md:flex items-center gap-7" aria-label="Hlavní navigace">
