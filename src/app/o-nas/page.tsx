@@ -42,8 +42,6 @@ export default function ONasPage() {
             <p className="eyebrow text-peach-2 mb-4">Příběh</p>
             <h2 className="h-display text-dark text-[clamp(32px,4vw,44px)] mb-7">
               TOMÁŠ A MARTIN
-              <br />
-              ROZBROJ
             </h2>
             <p className="text-ink-muted leading-[1.85] mb-5">
               Jsme otec a syn z Karviné, kteří spojili svou vášeň pro kovářské

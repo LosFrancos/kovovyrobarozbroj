@@ -57,7 +57,8 @@ export default function SluzbyPage() {
           return (
             <div
               key={s.title}
-              className="grid gap-8 md:gap-14 md:grid-cols-2 items-center py-12 md:py-14 border-b border-warm-gray last:border-b-0"
+              id={s.slug}
+              className="scroll-mt-24 grid gap-8 md:gap-14 md:grid-cols-2 items-center py-12 md:py-14 border-b border-warm-gray last:border-b-0"
             >
               {reversed ? (
                 <>

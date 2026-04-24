@@ -7,36 +7,43 @@ import { kontakty } from "@/data/kontakty";
 
 const services: {
   icon: ServiceIconName;
+  slug: string;
   title: string;
   desc: string;
 }[] = [
   {
     icon: "gate",
+    slug: "brany",
     title: "Brány & Vrata",
     desc: "Vjezdové brány, garážová vrata a automatické systémy na míru.",
   },
   {
     icon: "fence",
+    slug: "ploty",
     title: "Ploty & Branky",
     desc: "Oplocení pozemků, vstupní branky, plotové pole dle přání.",
   },
   {
     icon: "stairs",
+    slug: "schodiste",
     title: "Schodiště",
     desc: "Interiérová i exteriérová schodiště z oceli, nerezové i kombinované.",
   },
   {
     icon: "rail",
+    slug: "zabradli",
     title: "Zábradlí",
     desc: "Bezpečnostní i dekorativní zábradlí do interiéru i exteriéru.",
   },
   {
     icon: "nerez",
+    slug: "nerez",
     title: "Nerezová ocel",
     desc: "Výrobky z nerezové oceli — odolné, hygienické, elegantní.",
   },
   {
     icon: "furniture",
+    slug: "nabytek",
     title: "Kovový nábytek",
     desc: "Stoly, noční stolky, konzolové stolky, TV stojany na zakázku.",
   },
@@ -59,7 +66,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen bg-dark text-white flex items-center overflow-hidden">
+      <section className="relative min-h-[75vh] bg-dark text-white flex items-center overflow-hidden">
         <HeroSlideshow />
 
         {/* Left peach accent bar */}
@@ -139,11 +146,12 @@ export default function HomePage() {
           </Button>
         </div>
 
-        <div className="grid gap-[2px] [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px]">
           {services.map((s, i) => (
-            <div
+            <Link
               key={s.title}
-              className={`group relative p-10 transition-all duration-200 cursor-default ${
+              href={`/sluzby#${s.slug}`}
+              className={`group relative block p-10 transition-all duration-200 ${
                 i % 2 === 0 ? "bg-[#f8f7f4]" : "bg-[#f0ede7]"
               } hover:bg-dark hover:-translate-y-1`}
             >
@@ -161,7 +169,10 @@ export default function HomePage() {
               <p className="mt-3 text-ink-muted text-sm leading-relaxed group-hover:text-white/70 transition-colors">
                 {s.desc}
               </p>
-            </div>
+              <span className="mt-5 inline-flex items-center gap-1 font-sans text-xs uppercase tracking-[0.1em] text-peach-2 group-hover:text-peach transition-colors">
+                Detail služby →
+              </span>
+            </Link>
           ))}
         </div>
       </section>

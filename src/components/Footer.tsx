@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Mapa from "@/components/Mapa";
+import SocialLinks from "@/components/SocialLinks";
 import { kontakty, navigace } from "@/data/kontakty";
 
 export default function Footer() {
   return (
     <footer className="bg-dark text-white pt-16 pb-8">
       <div className="container-x">
-        <div className="grid gap-10 md:gap-8 md:grid-cols-[2fr_1fr_1fr]">
+        <div className="grid gap-10 md:gap-8 md:grid-cols-[1.4fr_1fr_1.1fr_1.3fr]">
           {/* O firmě */}
           <div>
             <p className="font-display font-extrabold uppercase text-xl md:text-2xl tracking-tight text-white">
@@ -59,30 +61,21 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Mapa */}
+          <div>
+            <p className="eyebrow text-peach mb-4">Najdete nás</p>
+            <div className="relative aspect-[4/3] w-full">
+              <Mapa title="Mapa Kovovýroba Rozbroj — Karviná" />
+            </div>
+          </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/35">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 text-xs text-white/35">
           <p>
             © {new Date().getFullYear()} {kontakty.firma.nazev}. Všechna práva vyhrazena.
           </p>
-          <div className="flex gap-4">
-            <a
-              href={kontakty.socialni.instagram.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-peach transition-colors"
-            >
-              Instagram
-            </a>
-            <a
-              href={kontakty.socialni.facebook.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-peach transition-colors"
-            >
-              Facebook
-            </a>
-          </div>
+          <SocialLinks variant="footer" />
         </div>
       </div>
     </footer>

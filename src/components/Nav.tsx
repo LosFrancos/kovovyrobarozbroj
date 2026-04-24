@@ -53,9 +53,11 @@ export default function Nav() {
             <Image
               src="/images/logo.jpg"
               alt={`${kontakty.firma.nazev} — logo`}
-              width={96}
-              height={96}
+              width={256}
+              height={256}
               priority
+              quality={90}
+              sizes="48px"
               className="h-12 w-auto rounded-[4px]"
             />
           </Link>

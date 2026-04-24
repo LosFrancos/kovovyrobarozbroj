@@ -1,5 +1,7 @@
 import ContactForm from "@/components/ContactForm";
+import Mapa from "@/components/Mapa";
 import PageHeader from "@/components/PageHeader";
+import SocialLinks from "@/components/SocialLinks";
 import { kontakty } from "@/data/kontakty";
 
 const kontaktniKarty = [
@@ -66,13 +68,18 @@ export default function KontaktPage() {
 
           <div className="mt-10 pt-8 border-t border-warm-gray">
             <p className="eyebrow text-peach-2 mb-3">Adresa dílny</p>
-            <p className="text-dark leading-relaxed">
-              {kontakty.adresa.ulice}
-              <br />
-              {kontakty.adresa.psc} {kontakty.adresa.mesto}
-            </p>
+            <div className="grid gap-6 sm:grid-cols-[1fr_1.2fr] items-start">
+              <p className="text-dark leading-relaxed">
+                {kontakty.adresa.ulice}
+                <br />
+                {kontakty.adresa.psc} {kontakty.adresa.mesto}
+              </p>
+              <div className="relative aspect-[4/3] w-full">
+                <Mapa title="Mapa dílny — Kovovýroba Rozbroj, Karviná" />
+              </div>
+            </div>
 
-            <p className="eyebrow text-peach-2 mb-3 mt-6">Otevírací doba</p>
+            <p className="eyebrow text-peach-2 mb-3 mt-8">Otevírací doba</p>
             <ul className="text-ink-muted text-sm space-y-1">
               {kontakty.oteviraciDoba.map((o) => (
                 <li key={o.dny}>
@@ -80,6 +87,9 @@ export default function KontaktPage() {
                 </li>
               ))}
             </ul>
+
+            <p className="eyebrow text-peach-2 mb-3 mt-8">Sledujte nás</p>
+            <SocialLinks variant="cards" />
           </div>
         </div>
 

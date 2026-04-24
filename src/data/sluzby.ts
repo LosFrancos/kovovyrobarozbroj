@@ -2,6 +2,7 @@ import type { ServiceIconName } from "@/components/ServiceIcon";
 
 export interface Sluzba {
   icon: ServiceIconName;
+  slug: string;
   title: string;
   desc: string;
   items: string[];
@@ -12,6 +13,7 @@ export interface Sluzba {
 export const sluzby: Sluzba[] = [
   {
     icon: "gate",
+    slug: "brany",
     title: "Brány a garážová vrata",
     desc:
       "Vjezdové brány jednokřídlé i dvoukřídlé, posuvné brány, garážová vrata sekční, výklopná nebo rolovací. Vše s možností automatizace a dálkového ovládání.",
@@ -26,6 +28,7 @@ export const sluzby: Sluzba[] = [
   },
   {
     icon: "fence",
+    slug: "ploty",
     title: "Ploty a branky",
     desc:
       "Oplocení pozemků v různých stylech — od klasických svařovaných plotů po moderní kovové plotové systémy. Vstupní branky na míru.",
@@ -40,6 +43,7 @@ export const sluzby: Sluzba[] = [
   },
   {
     icon: "stairs",
+    slug: "schodiste",
     title: "Schodiště",
     desc:
       "Interiérová i exteriérová schodiště z oceli, nerezové oceli nebo v kombinaci s dřevem. Přímá, lomená, točitá — vždy na míru prostoru.",
@@ -54,6 +58,7 @@ export const sluzby: Sluzba[] = [
   },
   {
     icon: "rail",
+    slug: "zabradli",
     title: "Zábradlí",
     desc:
       "Bezpečnostní i dekorativní zábradlí pro schodiště, balkony, terasy a francouzská okna. Klasické i moderní tvary, ocel i nerez.",
@@ -68,6 +73,7 @@ export const sluzby: Sluzba[] = [
   },
   {
     icon: "nerez",
+    slug: "nerez",
     title: "Nerezová ocel",
     desc:
       "Speciální výrobky z nerezové oceli — odolné vůči korozi, hygienické a elegantní. Ideální pro náročné prostředí.",
@@ -82,6 +88,7 @@ export const sluzby: Sluzba[] = [
   },
   {
     icon: "furniture",
+    slug: "nabytek",
     title: "Kovový nábytek",
     desc:
       "Jídelní stoly s masivní nebo mramorovou deskou, noční stolky, TV stolky a konzoly. Každý kus navrhujeme a vyrábíme individuálně.",
