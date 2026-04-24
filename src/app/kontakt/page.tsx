@@ -1,8 +1,22 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import Mapa from "@/components/Mapa";
 import PageHeader from "@/components/PageHeader";
 import SocialLinks from "@/components/SocialLinks";
 import { kontakty } from "@/data/kontakty";
+
+export const metadata: Metadata = {
+  title: "Kontakt — Kovovýroba Rozbroj, Karviná",
+  description:
+    "Rudé Armády 1820/31, 733 01 Karviná. Tomáš: +420 737 421 618, Martin: +420 603 438 228. E-mail info@kovorozbroj.cz. Po–Pá 7:00–16:00.",
+  alternates: { canonical: "/kontakt" },
+  openGraph: {
+    title: "Kontakt — Kovovýroba Rozbroj, Karviná",
+    description:
+      "Rudé Armády 1820/31, Karviná. Po–Pá 7:00–16:00. Ozvěte se — odpovíme do 24 hodin.",
+    url: "/kontakt",
+  },
+};
 
 const kontaktniKarty = [
   {
@@ -25,9 +39,52 @@ const kontaktniKarty = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://kovovyrobarozbroj.cz/#business",
+  name: kontakty.firma.nazev,
+  description: kontakty.firma.slogan,
+  url: "https://kovovyrobarozbroj.cz",
+  telephone: kontakty.osoby[0].telefon,
+  email: kontakty.email,
+  image: "https://kovovyrobarozbroj.cz/opengraph-image",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: kontakty.adresa.ulice,
+    postalCode: kontakty.adresa.psc,
+    addressLocality: kontakty.adresa.mesto,
+    addressCountry: "CZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: kontakty.adresa.gps.lat,
+    longitude: kontakty.adresa.gps.lon,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "16:00",
+    },
+  ],
+  sameAs: [kontakty.socialni.instagram.url, kontakty.socialni.facebook.url],
+  founder: kontakty.osoby.map((o) => ({
+    "@type": "Person",
+    name: o.jmeno,
+    telephone: o.telefon,
+  })),
+  areaServed: { "@type": "Country", name: "Česká republika" },
+};
+
 export default function KontaktPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader
         eyebrow="Kontakt"
         title="Ozvěte se nám"

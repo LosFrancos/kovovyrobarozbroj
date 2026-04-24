@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   title: "Zásady ochrany osobních údajů",
   description:
     "Informace o zpracování osobních údajů při využívání webu a kontaktního formuláře Kovovýroba Rozbroj.",
-  robots: { index: true, follow: false },
+  alternates: { canonical: "/zasady-ochrany-osobnich-udaju" },
+  robots: { index: false, follow: true },
+  openGraph: {
+    title: "Zásady ochrany osobních údajů",
+    description: "Informace o zpracování osobních údajů — Kovovýroba Rozbroj.",
+    url: "/zasady-ochrany-osobnich-udaju",
+  },
 };
 
 export default function ZasadyPage() {

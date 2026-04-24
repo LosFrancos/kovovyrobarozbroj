@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import { sluzby } from "@/data/sluzby";
+
+export const metadata: Metadata = {
+  title: "Služby — brány, ploty, schodiště, zábradlí",
+  description:
+    "Vyrábíme brány, garážová vrata, plotové dílce, schodiště, zábradlí, nerezové konstrukce i kovový nábytek na míru. Svařování TIG a MIG v Karviné.",
+  alternates: { canonical: "/sluzby" },
+  openGraph: {
+    title: "Služby — brány, ploty, schodiště, zábradlí",
+    description:
+      "Brány, vrata, ploty, schodiště, zábradlí, nerez a kovový nábytek na míru. Svařování TIG a MIG.",
+    url: "/sluzby",
+  },
+};
 
 export default function SluzbyPage() {
   return (

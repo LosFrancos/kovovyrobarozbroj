@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import PraceGallery from "@/components/PraceGallery";
+
+export const metadata: Metadata = {
+  title: "Naše práce — realizace a reference",
+  description:
+    "Ukázky realizací z dílny Kovovýroba Rozbroj v Karviné: brány, ploty, schodiště, zábradlí, nerezové výrobky i kovový nábytek. Realizujeme po celé ČR.",
+  alternates: { canonical: "/nase-prace" },
+  openGraph: {
+    title: "Naše práce — realizace a reference",
+    description:
+      "Ukázky realizací z dílny v Karviné: brány, ploty, schodiště, zábradlí, nerez, nábytek.",
+    url: "/nase-prace",
+  },
+};
 
 export default function NasePracePage() {
   return (

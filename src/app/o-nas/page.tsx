@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import { kontakty } from "@/data/kontakty";
+
+export const metadata: Metadata = {
+  title: "O nás — rodinná kovovýroba z Karviné",
+  description:
+    "Tomáš a Martin Rozbroj — otec a syn z Karviné. Kovářské řemeslo spojené s moderní výrobou. Individuální přístup, pečlivé zpracování, férové jednání.",
+  alternates: { canonical: "/o-nas" },
+  openGraph: {
+    title: "O nás — rodinná kovovýroba z Karviné",
+    description:
+      "Tomáš a Martin Rozbroj — otec a syn z Karviné. Kovářské řemeslo a moderní výroba na míru.",
+    url: "/o-nas",
+  },
+};
 
 const hodnoty = [
   {
