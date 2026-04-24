@@ -30,6 +30,7 @@ export const kontakty = {
     ulice: "Rudé Armády 1820/31",
     psc: "733 01",
     mesto: "Karviná",
+    gps: { lat: 49.8713488, lon: 18.5478925 },
   },
   oteviraciDoba: [
     { dny: "Pondělí – Pátek", hodiny: "7:00 – 16:00" },

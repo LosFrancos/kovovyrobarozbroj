@@ -4,10 +4,10 @@ interface Props {
   eyebrow: string;
   title: string;
   bgUrl: string;
-  bgAlt?: string;
+  bgAlt: string;
 }
 
-export default function PageHeader({ eyebrow, title, bgUrl, bgAlt = "" }: Props) {
+export default function PageHeader({ eyebrow, title, bgUrl, bgAlt }: Props) {
   return (
     <section className="relative bg-dark text-white overflow-hidden pt-[100px] md:pt-[150px] pb-[70px] md:pb-[90px]">
       {/* Background image */}
