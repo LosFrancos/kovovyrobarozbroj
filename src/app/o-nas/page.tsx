@@ -85,7 +85,7 @@ export default function ONasPage() {
                   <p className="text-xs text-ink-muted mb-1">IČ {osoba.ic}</p>
                   <a
                     href={osoba.telefonLink}
-                    className="text-sm text-peach-2 font-medium hover:text-dark transition-colors"
+                    className="text-sm text-dark font-semibold hover:text-peach-2 transition-colors"
                   >
                     {osoba.telefon}
                   </a>

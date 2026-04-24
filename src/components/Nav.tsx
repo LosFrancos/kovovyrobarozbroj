@@ -58,7 +58,7 @@ export default function Nav() {
               priority
               quality={90}
               sizes="48px"
-              className="h-12 w-auto rounded-[4px]"
+              className="h-12 w-auto [mix-blend-mode:screen]"
             />
           </Link>
 

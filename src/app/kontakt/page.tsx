@@ -92,7 +92,7 @@ export default function KontaktPage() {
         bgAlt="Kovovýroba Rozbroj — atmosféra dílny"
       />
 
-      <div className="container-x py-16 md:py-20 grid gap-12 md:gap-20 md:grid-cols-2">
+      <div className="container-x py-16 md:py-20 grid gap-10 md:gap-12 md:grid-cols-2">
         {/* Kontaktní údaje */}
         <div>
           <h2 className="h-display text-dark text-[clamp(26px,3vw,32px)] mb-10">
@@ -115,7 +115,7 @@ export default function KontaktPage() {
                 ))}
                 <a
                   href={c.action}
-                  className="inline-block mt-2.5 text-[13px] text-peach-2 font-semibold tracking-button hover:text-dark transition-colors"
+                  className="inline-block mt-2.5 text-[13px] text-dark font-semibold tracking-button hover:text-peach-2 transition-colors"
                 >
                   {c.actionLabel} →
                 </a>
