@@ -73,7 +73,14 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 text-xs text-white/35">
           <p>
-            © {new Date().getFullYear()} {kontakty.firma.nazev}. Všechna práva vyhrazena.
+            © {new Date().getFullYear()} {kontakty.firma.nazev}. Všechna práva vyhrazena.{" "}
+            <Link
+              href="/zasady-ochrany-osobnich-udaju"
+              className="hover:text-peach transition-colors underline decoration-white/20 hover:decoration-peach underline-offset-2"
+            >
+              Zásady ochrany osobních údajů
+            </Link>
+            .
           </p>
           <SocialLinks variant="footer" />
         </div>

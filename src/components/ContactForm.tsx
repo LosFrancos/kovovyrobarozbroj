@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -147,6 +148,27 @@ export default function ContactForm() {
           className={`${inputCls} resize-y`}
         />
       </div>
+
+      <label className="flex items-start gap-3 text-[13px] text-ink-muted leading-snug cursor-pointer">
+        <input
+          type="checkbox"
+          name="souhlas"
+          required
+          disabled={disabled}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-peach cursor-pointer"
+        />
+        <span>
+          Souhlasím se zpracováním osobních údajů pro vyřízení poptávky.
+          Podrobnosti viz{" "}
+          <Link
+            href="/zasady-ochrany-osobnich-udaju"
+            className="text-peach-2 underline hover:text-dark"
+          >
+            Zásady ochrany osobních údajů
+          </Link>
+          .
+        </span>
+      </label>
 
       {status === "error" && (
         <p

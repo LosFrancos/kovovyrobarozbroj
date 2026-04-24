@@ -20,7 +20,7 @@ export default function HeroSlideshow() {
       5000,
     );
     return () => clearInterval(id);
-  }, []);
+  }, [active]);
 
   return (
     <>
