@@ -66,7 +66,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative min-h-[75vh] bg-dark text-white flex items-center overflow-hidden">
+      <section className="relative md:min-h-[75vh] bg-dark text-white flex items-center overflow-hidden">
         <HeroSlideshow />
 
         {/* Left peach accent bar */}
@@ -75,24 +75,24 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-[1] container-x w-full pt-[120px] pb-20 md:pt-[140px] md:pb-24">
-          <span className="inline-block bg-peach text-dark font-display font-semibold text-xs uppercase tracking-eyebrow px-3.5 py-1.5 mb-7 whitespace-nowrap">
+        <div className="relative z-[1] container-x w-full pt-[100px] pb-12 md:pt-[140px] md:pb-24">
+          <span className="inline-block bg-peach text-dark font-display font-semibold text-xs uppercase tracking-eyebrow px-3 py-1 md:px-3.5 md:py-1.5 mb-5 md:mb-7 whitespace-nowrap">
             Karviná · Rodinná kovovýroba
           </span>
 
-          <h1 className="font-display font-extrabold text-[clamp(52px,8vw,110px)] leading-[0.92] tracking-tight max-w-[800px] mb-8 text-balance">
+          <h1 className="font-display font-extrabold text-[clamp(40px,9vw,110px)] leading-[0.92] tracking-tight max-w-[800px] mb-5 md:mb-8 text-balance">
             KOVOVÝROBA
             <br />
             <span className="text-peach">NA MÍRU.</span>
           </h1>
 
-          <p className="font-sans font-light text-lg text-white/75 max-w-[480px] leading-[1.7] mb-12">
+          <p className="font-sans font-light text-base md:text-lg text-white/75 max-w-[480px] leading-[1.6] md:leading-[1.7] mb-8 md:mb-12">
             Brány, ploty, schodiště, zábradlí a kovový nábytek.
             <br />
             Rodinná dílna z Karviné s precizním přístupem ke každé zakázce.
           </p>
 
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap gap-3 md:gap-4 items-center">
             <Button href="/kontakt" variant="primary">
               Nezávazná poptávka →
             </Button>
@@ -102,13 +102,13 @@ export default function HomePage() {
           </div>
 
           {/* Stats row */}
-          <div className="mt-16 md:mt-20 pt-10 md:pt-12 border-t border-white/[0.12] flex flex-wrap gap-10 md:gap-12">
+          <div className="mt-10 md:mt-20 pt-6 md:pt-12 border-t border-white/[0.12] flex flex-wrap gap-6 md:gap-12">
             {stats.map((s) => (
               <div key={s.num}>
-                <div className="font-display font-extrabold text-[42px] leading-none text-peach">
+                <div className="font-display font-extrabold text-[32px] md:text-[42px] leading-none text-peach">
                   {s.num}
                 </div>
-                <div className="font-sans text-[13px] text-white/50 uppercase tracking-[0.08em] mt-1">
+                <div className="font-sans text-[12px] md:text-[13px] text-white/50 uppercase tracking-[0.08em] mt-1">
                   {s.label}
                 </div>
               </div>
