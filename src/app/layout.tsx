@@ -19,7 +19,7 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kovovyrobarozbroj.cz"),
+  metadataBase: new URL("https://www.kovovyrobarozbroj.cz"),
   title: {
     default: "Kovovýroba Rozbroj — Karviná | Brány, ploty, zábradlí na míru",
     template: "%s | Kovovýroba Rozbroj",

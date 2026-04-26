@@ -42,13 +42,13 @@ const kontaktniKarty = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://kovovyrobarozbroj.cz/#business",
+  "@id": "https://www.kovovyrobarozbroj.cz/#business",
   name: kontakty.firma.nazev,
   description: kontakty.firma.slogan,
-  url: "https://kovovyrobarozbroj.cz",
+  url: "https://www.kovovyrobarozbroj.cz",
   telephone: kontakty.osoby[0].telefon,
   email: kontakty.email,
-  image: "https://kovovyrobarozbroj.cz/opengraph-image",
+  image: "https://www.kovovyrobarozbroj.cz/opengraph-image",
   address: {
     "@type": "PostalAddress",
     streetAddress: kontakty.adresa.ulice,
