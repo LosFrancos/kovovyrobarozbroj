@@ -1,16 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import Captions from "yet-another-react-lightbox/plugins/captions";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
 import {
   prace,
   praceKategorie,
   type PraceKategorie,
 } from "@/data/prace";
+
+const LightboxLazy = dynamic(() => import("./LightboxLazy"), { ssr: false });
 
 export default function PraceGallery() {
   const [active, setActive] = useState<PraceKategorie>("Vše");
@@ -102,15 +101,14 @@ export default function PraceGallery() {
         </div>
       )}
 
-      <Lightbox
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        slides={slides}
-        plugins={[Captions]}
-        captions={{ descriptionTextAlign: "start" }}
-        controller={{ closeOnBackdropClick: true }}
-      />
+      {index >= 0 && (
+        <LightboxLazy
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          slides={slides}
+        />
+      )}
     </>
   );
 }
