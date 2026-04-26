@@ -48,6 +48,7 @@ const jsonLd = {
   url: "https://www.kovovyrobarozbroj.cz",
   telephone: kontakty.osoby[0].telefon,
   email: kontakty.email,
+  logo: "https://www.kovovyrobarozbroj.cz/images/logo.png",
   image: "https://www.kovovyrobarozbroj.cz/opengraph-image",
   address: {
     "@type": "PostalAddress",
