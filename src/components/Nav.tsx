@@ -51,14 +51,14 @@ export default function Nav() {
             aria-label={`${kontakty.firma.nazev} — domů`}
           >
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt={`${kontakty.firma.nazev} — logo`}
               width={256}
               height={256}
               priority
               quality={90}
               sizes="48px"
-              className="h-12 w-auto [mix-blend-mode:screen]"
+              className="h-12 w-auto"
             />
           </Link>
 
@@ -109,13 +109,13 @@ export default function Nav() {
       >
         <div className="container-x h-[72px] flex items-center justify-between">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt={`${kontakty.firma.nazev} — logo`}
             width={256}
             height={256}
             quality={90}
             sizes="48px"
-            className="h-12 w-auto rounded-[4px]"
+            className="h-12 w-auto"
           />
           <button
             type="button"

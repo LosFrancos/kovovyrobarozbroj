@@ -58,9 +58,9 @@ export default function ONasPage() {
               TOMÁŠ A MARTIN
             </h2>
             <p className="text-ink-muted leading-[1.85] mb-5">
-              Jsme otec a syn z Karviné, kteří spojili svou vášeň pro kovářské
-              řemeslo a moderní výrobu. Každou zakázku bereme jako výzvu — ať
-              jde o jednoduchou branku nebo komplexní schodiště.
+              Jsme otec a syn z Karviné, kteří spojili svou vášeň pro řemeslo
+              a moderní výrobu. Každou zakázku bereme jako výzvu — ať jde
+              o jednoduchou branku nebo komplexní schodiště.
             </p>
             <p className="text-ink-muted leading-[1.85] mb-5">
               Díky letům praxe a neustálému vzdělávání jsme schopni nabídnout

@@ -188,7 +188,7 @@ export default function HomePage() {
               S TRADICÍ
             </h2>
             <p className="text-white/65 leading-[1.8] mb-4">
-              Jsme Tomáš a Martin Rozbroj — otec a syn, kteří spojili řemeslné
+              Jsme Tomáš a Martin Rozbrojovi — otec a syn, kteří spojili řemeslné
               zkušenosti s moderním přístupem k výrobě. Každou zakázku bereme
               jako vlastní projekt a pracujeme tak, aby byl zákazník spokojený.
             </p>
