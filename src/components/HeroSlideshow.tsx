@@ -7,7 +7,6 @@ const SLIDES = [
   { url: "/images/hero/hero-1.webp", alt: "Kovové zábradlí na míru — Kovovýroba Rozbroj Karviná" },
   { url: "/images/hero/hero-2.webp", alt: "Nerezové zábradlí — Kovovýroba Rozbroj Karviná" },
   { url: "/images/hero/hero-3.webp", alt: "Vjezdová brána na míru — Kovovýroba Rozbroj Karviná" },
-  { url: "/images/hero/hero-4.webp", alt: "Realizace kovovýroby — Kovovýroba Rozbroj Karviná" },
   { url: "/images/hero/hero-5.jpg", alt: "Tomáš a Martin Rozbroj — rodinná kovovýroba z Karviné" },
 ];
 
