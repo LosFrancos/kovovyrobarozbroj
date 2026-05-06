@@ -94,36 +94,14 @@ export default function ONasPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src="/images/majitele/tomas-martin.jpg"
-                alt="Tomáš a Martin Rozbroj — majitelé kovovýroby z Karviné"
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <Image
-                  src="/images/majitele/tomas.jpg"
-                  alt="Tomáš Rozbroj — majitel a kovář, Kovovýroba Rozbroj"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 20vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <Image
-                  src="/images/majitele/martin.jpg"
-                  alt="Martin Rozbroj — majitel a kovář, Kovovýroba Rozbroj"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 20vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/majitele/tomas-martin.jpg"
+              alt="Tomáš a Martin Rozbroj — majitelé kovovýroby z Karviné"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

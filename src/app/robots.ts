@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/zasady-ochrany-osobnich-udaju"],
+        disallow: ["/zasady-ochrany-osobnich-udaju", "/admin"],
       },
     ],
     sitemap: `${BASE}/sitemap.xml`,
