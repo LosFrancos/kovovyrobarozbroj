@@ -37,3 +37,6 @@ next-env.d.ts
 
 # claude code local state
 .claude/
+
+# zdrojové originály fotek (velké JPG, na web jdou webp v public/)
+/Fotky/Nove fotky/

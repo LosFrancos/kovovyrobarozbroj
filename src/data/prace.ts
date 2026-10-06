@@ -43,6 +43,11 @@ const rawData: { n: number; cat: PraceItem["kategorie"]; label: string }[] = [
   { n: 20, cat: "Vše", label: "Realizace" },
   { n: 21, cat: "Schodiště", label: "Schodiště" },
   { n: 22, cat: "Brány", label: "Brána" },
+  { n: 23, cat: "Brány", label: "Brána a branka" },
+  { n: 24, cat: "Brány", label: "Brána a branka" },
+  { n: 25, cat: "Brány", label: "Plot z tahokovu" },
+  { n: 26, cat: "Zábradlí", label: "Zábradlí" },
+  { n: 27, cat: "Nábytek", label: "Kovová houpačka" },
 ];
 
 export const prace: PraceItem[] = rawData.map(({ n, cat, label }) => {
